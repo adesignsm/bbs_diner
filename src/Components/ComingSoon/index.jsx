@@ -14,11 +14,13 @@ const ComingSoon = () => {
     document.onmousemove = (e) => {
         console.log(e);
 
-        let mouseX = e.clientX + window.innerWidth / 2;
-        let mouseY = e.clientY - window.innerHeight / 2;
-
-        document.getElementById("movable-logo").style.marginLeft = (mouseX) * 0.0009 + "rem";
-        document.getElementById("movable-logo").style.marginTop = (mouseY) * 0.0009 + "rem";
+        if (window.innerWidth > 690) {
+            let mouseX = e.clientX + window.innerWidth / 2;
+            let mouseY = e.clientY - window.innerHeight / 2;
+    
+            document.getElementById("movable-logo").style.marginLeft = (mouseX) * 0.0009 + "rem";
+            document.getElementById("movable-logo").style.marginTop = (mouseY) * 0.0009 + "rem";
+        }
     }
 
     return (
